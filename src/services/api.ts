@@ -96,6 +96,7 @@ export const updateFontGroup = async (id: string, data: FontGroupData) => {
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 export const deleteFontGroup = async (id: string) => {
+  console.log(`Deleting font group with ID: ${id}`)
   // In a real app: const response = await api.delete(`/font-groups/${id}`);
   await new Promise((resolve) => setTimeout(resolve, 1000)) // Simulate network delay
   return { success: true }
