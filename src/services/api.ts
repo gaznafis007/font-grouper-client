@@ -2,7 +2,7 @@ import axios from "axios"
 
 // Create axios instance with default config
 const api = axios.create({
-  baseURL: "/api", // Assuming your API is served from the same domain
+  baseURL: "http://www.font-grouper.free.nf/api", // Assuming your API is served from the same domain
   headers: {
     "Content-Type": "application/json",
   },
@@ -59,8 +59,14 @@ interface FontGroupData {
 
 export const createFontGroup = async (data: FontGroupData) => {
   // In a real app: const response = await api.post("/font-groups", data);
-  await new Promise((resolve) => setTimeout(resolve, 1000)) // Simulate network delay
-  return { id: Date.now().toString(), ...data }
+  const response = await api.post("/fonts-groups", data, {
+    headers: {
+      "Content-Type": "multipart/form-data",
+    },
+  })
+  return response.data
+  // await new Promise((resolve) => setTimeout(resolve, 1000)) // Simulate network delay
+  // return { id: Date.now().toString(), ...data }
 }
 
 export const getFontGroups = async () => {
@@ -90,14 +96,22 @@ export const getFontGroups = async () => {
 
 export const updateFontGroup = async (id: string, data: FontGroupData) => {
   // In a real app: const response = await api.put(`/font-groups/${id}`, data);
-  await new Promise((resolve) => setTimeout(resolve, 1000)) // Simulate network delay
-  return { id, ...data }
+  const response = await api.put(`/fonts-groups/${id}`, data, {
+    headers: {
+      "Content-Type": "multipart/form-data",
+    },
+  })
+  return response.data
+  // await new Promise((resolve) => setTimeout(resolve, 1000)) // Simulate network delay
+  // return { id, ...data }
 }
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 export const deleteFontGroup = async (id: string) => {
   console.log(`Deleting font group with ID: ${id}`)
   // In a real app: const response = await api.delete(`/font-groups/${id}`);
-  await new Promise((resolve) => setTimeout(resolve, 1000)) // Simulate network delay
-  return { success: true }
+  const response = await api.delete(`/fonts-groups/${id}` )
+  return response.data
+  // await new Promise((resolve) => setTimeout(resolve, 1000)) // Simulate network delay
+  // return { success: true }
 }
