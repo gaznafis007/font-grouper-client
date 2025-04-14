@@ -1,7 +1,3 @@
-Below is a well-structured `README.md` for your completed FontGrouper project, incorporating the provided requirements, repository links, live link, and server link. It includes setup instructions, project overview, features, and deployment details, ensuring clarity for users and contributors.
-
----
-
 # FontGrouper
 
 FontGrouper is a web application for uploading, managing, and grouping TrueType Font (TTF) files. It features a responsive React.js frontend styled with Tailwind CSS and a Core PHP backend with a MySQL database. The application allows users to upload TTF fonts, create font groups, and manage them through an intuitive single-page interface.
@@ -167,7 +163,3 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 - Built with [React.js](https://reactjs.org/), [Tailwind CSS](https://tailwindcss.com/), and [Core PHP](https://www.php.net/).
 - Hosted on [Vercel](https://vercel.com/) and [InfinityFree](https://www.infinityfree.com/).
 - Thanks to the open-source community for tools and inspiration.
-
----
-
-This `README.md` provides a clear overview, setup guide, and usage instructions for your FontGrouper project. You can add it to both repositories (`font-grouper-client` and `font-grouper-backend`) with minor adjustments (e.g., emphasizing client or server details). If you need help uploading it to GitHub or have specific sections to tweak, let me know!
